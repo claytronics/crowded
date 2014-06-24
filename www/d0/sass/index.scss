@@ -1,0 +1,79 @@
+@import "compass/css3";
+@import "mixins";
+@import "reset";
+@import "helpers";
+
+$fsbase: 16;
+$lhbase: 26;
+
+%white-on-blue {
+    background-color: #2384d9;
+    color: #fff;
+}
+%blue-on-white {
+    background-color: #fff;
+    color: #2384d9;
+}
+%dark-on-white {
+    background-color: #fff;
+    color: #343434;
+}
+
+html {
+//    font-size: 62.5%; /* base-size: 10px */
+    @include px-rem(font-size, 1);
+    font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+////////////////////////////////////////////////// Typography
+h1 {
+    @include px-rem(font-size, 4);
+    line-height: $lhbase/30;
+    font-weight: bold;
+}
+
+h2 {
+    @include px-rem(font-size, 2);
+    line-height: $lhbase/20;
+ }
+
+h3,
+h4 {
+    @include px-rem(font-size, 1.8);
+    line-height: $lhbase/18;
+}
+
+h5,
+h6 {
+    @include px-rem(font-size, 1.6);
+    line-height: $lhbase/16;
+}
+
+////////////////////////////////////////////////// Sections
+#mainhdr {
+    @include px-rem(font-size, 1.4);
+    @extend %white-on-blue;
+//    text-shadow: 1px 1px 1px #222;
+    
+    nav.island {
+        border-top: 4px dashed white;
+    }
+
+    .nav li {
+        @include border-radius(10px 10px 0 0);
+        
+        &.selected {
+            @extend %dark-on-white;
+        }
+    }
+}
+
+////////////////////////////////////////////////// Course View
+#video {
+    width: 400px;
+    height: 300px;
+    border: 2px solid #ddd;
+}
+#discuss-ctnr {
+    background-color: rgb(246, 246, 246);
+}

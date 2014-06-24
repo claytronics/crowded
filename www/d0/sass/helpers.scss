@@ -1,0 +1,52 @@
+@import "mixins";
+
+.boxed-content {
+    @include box-sizing(content-box);
+}
+.boxed-out {
+    @include box-sizing(padding-box);
+}
+.boxed-in {
+    @include box-sizing(border-box);
+}
+
+.wide {
+    width: 100%;
+}
+
+.tall {
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.unscrollable {
+    overflow: hidden;
+}
+.scrollable {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.clear:after {
+  height: 0;
+  display: block;
+  content: "\0020";
+  clear: both;
+  visibility: hidden;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url(/d0/css/ellipsis.xml#ellipsis);
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}

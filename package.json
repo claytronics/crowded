@@ -1,0 +1,26 @@
+{
+  "name": "crowded",
+  "version": "0.0.1",
+  "description": "Crowdsourcing education for the betterment of mankind (I guess?).  Also for profit.",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flashgroup/crowded.git"
+  },
+  "author": "Flashgroup",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/flashgroup/crowded/issues"
+  },
+  "homepage": "https://github.com/flashgroup/crowded"
+}
