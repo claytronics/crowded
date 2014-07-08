@@ -1,0 +1,25 @@
+Avery Feingold Diary for Summer 2014
+
+6/24/14:
+
+Diary creation:
+~Diary created using "git touch" command in 'crowded' folder
+~Diary added to staging area using "git add" command (useful website: http://alvinalexander.com/git/git-cheat-sheet-git-reference-commands)
+~Diary committed using "git commit -m 'commit name'" command
+~Commit pushed using "git push" command
+
+Homebrew & Nginx:
+~Installed Homebrew Package Manager via console, simple google search
+~Command "brew doctor used"
+~Command "brew prune" used--error
+~Command "brew install nginx" used to install nginx
+
+UNIX Learning:
+~Began learning UNIX commands using http://www.ee.surrey.ac.uk/Teaching/Unix/unix3.html, very helpful
+~Next steps: continue using this website^; learn about git-specific commands (using "man"?)
+
+--------------------------------
+
+
+
+
