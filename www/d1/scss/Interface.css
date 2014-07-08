@@ -1,0 +1,223 @@
+#hdr {
+    background-color: #000047;
+    height: 98px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    font-size:24px;
+    color: white;
+    border-bottom: 2px solid #4c4c4c;
+}
+
+#title {
+    font-size: 80px;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+#topbar {
+    font-size: 24px;
+    position: fixed;
+    left: 20px;
+    top: 65px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#topbaritem {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    display: inline;
+}
+
+#dummyheader {
+    height: 92px;
+    width: 100%;
+    margin: auto;
+    background-color: yellow;
+}
+
+#vidandpptpanel {
+    width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 390px;
+    border-left: 2px solid #4c4c4c;
+    border-right: 2px solid #4c4c4c;
+}
+
+#video {
+    color: black;
+    width: 640px;
+    height: 390px;
+    background-color: black;
+    float: left;
+    text-align: center;
+    font-size: 96px;
+}
+
+#pptpanel {
+    width: 480px;
+    float: right;
+    height: 390px;
+}
+
+#ppt {
+    width: 480px;
+    float: right;
+    color: black;
+    height: 360px;
+    background-color: #ccffff;
+    text-align: center;
+    font-size: 96px;
+    background-image: url("Slide1.jpg");
+    background-size: 480px 360px;
+}
+
+#navbarpanel {
+    width: 480px;
+    height: 28px;
+    float: right;
+    background-color: #171717;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    border-top: 2px solid black;
+}
+
+#navbaritem {
+    text-align: center;
+    display: inline;
+    float: left;
+    color: #aeaeae;
+    margin-right: 10px;
+    background-color: #171717;
+    cursor: pointer;
+}
+
+
+#slidechooser {
+    text-align: center;
+    display: inline;
+    float: right;
+    color: #aeaeae;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #171717;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+#slidechoicepanel {
+    width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 390px;
+    border-left: 2px solid #4c4c4c;
+    border-right: 2px solid #4c4c4c;
+    background-color: black;
+    /*opacity: .8;*/
+    color: white;
+    position: relative;
+    top: -390px;
+    visibility: hidden;
+    margin-bottom: -390px;
+}
+
+#chooser {
+    height: 390px;
+    width: 500px;
+    color: white;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slidechoice {
+    height: 200px;
+    width: 500px;
+    vertical-align: middle;
+    text-align: left;
+    color: white;
+}
+
+/*
+#slidechoicethumb1 {
+    height: 150px;
+    width: 200px;
+    background-image: url("Slide1.jpg");
+    background-size: 200px 150px;
+}
+
+
+#slidechoicethumb2 {
+    height: 150px;
+    width: 200px;
+    background-image: url("Slide2.jpg");
+    background-size: 200px 150px;
+}
+
+#slidechoicethumb3 {
+    height: 150px;
+    width: 200px;
+    background-image: url("Slide3.jpg");
+    background-size: 200px 150px;
+}
+
+#slidechoicethumb4 {
+    height: 150px;
+    width: 200px;
+    background-image: url("Slide4.jpg");
+    background-size: 200px 150px;
+}*/
+
+
+
+#closescp {
+    cursor: pointer;
+    float: right;
+    background-color: black;
+    color: white;
+    display: inline;
+}
+
+#notespanel {
+    width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    text-align: center;
+    font-size: 96px;
+    color: black;
+    background-color: #FFFFF0;
+    border: 2px solid #4c4c4c;
+}
+
+p {
+    color: white;
+    font-size: 24px;
+}
+
+#test {
+    color: white;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
