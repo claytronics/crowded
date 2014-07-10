@@ -1,0 +1,113 @@
+<p><em>Table of Contents</em></p>
+
+<ul>
+<li><a href="#toc5">The quiz file</a>
+<ul>
+<li><a href="#toc15">comments</a></li>
+<li><a href="#toc20">overall question info</a></li>
+<li><a href="#toc29">sub-question specified</a></li>
+<li><a href="#toc40">fill-in answer syntax</a>
+<ul>
+<li><a href="#toc45">short answer</a></li>
+<li><a href="#toc54">long answer</a></li>
+<li><a href="#toc61">tables</a></li>
+<li><a href="#toc76">multiple-choice</a></li>
+<li><a href="#toc81">true-false</a></li>
+<li><a href="#toc87">matching</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#toc91">the processed file</a></li>
+</ul>
+
+<h1><a name="toc5"></a> The quiz file</h1>
+
+<p>This directory hols the quiz like questions that will be applied by
+the system.  Each question must be in a seperate file.  The files are
+a combination of our own syntax + markdown for formatting of the
+question text.  The questions will be preprocessed by the system into
+a json file which is what is loaded by the crowded front-end.</p>
+
+<p>Our syntax:</p>
+
+<h2><a name="toc15"></a> comments</h2>
+
+<p>lines starting with # are comments and won't be shown to the user.
+The # must be in the first column!</p>
+
+<h2><a name="toc20"></a> overall question info</h2>
+
+<p>optional information about the question:</p>
+
+<p>title: the rest of the line is the title of this question.  </p>
+
+<p>points: the rest of this line is the points for this question.  Must
+be a decimal number.</p>
+
+<h2><a name="toc29"></a> sub-question specified</h2>
+
+<p>If the question is a multipart question, then each part starts in column 1 with</p>
+
+<p>\Q[pts]{level}:</p>
+
+<p>specifies a question that is a sub-question to level-1.  Initial level
+is 1.  defaults to level 1.  If [pts] is specified, this question is
+worth a total of [pts]. Otherwise it is equal to sum of fill-ins for
+this sub-question.</p>
+
+<h2><a name="toc40"></a> fill-in answer syntax</h2>
+
+<p>Fill-ins for a question come in several types: single-short fill-in,
+long fill in, table, multiple choice, true-false, and matching.</p>
+
+<h3><a name="toc45"></a> short answer</h3>
+
+<p>\short[width]{regexp-list}[pts]</p>
+
+<p>short fill in generates a blank text-box with <width> characters,
+defaults to 8 if not present with an answer that must match one of the
+entries in regexp-list. The answer is worth {pts} if specifed,
+otherwise it equals the value of the most recently specified question.</p>
+
+<h3><a name="toc54"></a> long answer</h3>
+
+<p>\long[height]{rubric for human to grade}[pts]</p>
+
+<p>generate a text area of height lines, defaults to 8 if not present.
+Answer rubric must be specified.  It is worth {pts} if specified.</p>
+
+<h3><a name="toc61"></a> tables</h3>
+
+<p>\table{num-columns}[pts]
+\headers{col-1-text}{col-2-text}...{col-num-columns-text}
+\row{col specifiers}
+\endtable</p>
+
+<p>Will generate a table with num-columns.  If \headers is specified,
+then each column title is specified here.  For each \row specified til
+we get to a \endtable there is a row in the table.  There must be
+num-columns brace expressions.  Inside each, there is either text,
+html, markdown, or a \short{regexp-list} which will generate a fill in
+for the student.  A special \gray can be used to generate a box which
+is grayed out.</p>
+
+<h3><a name="toc76"></a> multiple-choice</h3>
+
+<p>\mc[pts]{choice-1}{choice-2}...</p>
+
+<p>The choice that is correct should start with a '!'</p>
+
+<h3><a name="toc81"></a> true-false</h3>
+
+<p>\tf[pts]{yes-text}{no-text}</p>
+
+<p>The choice that is correct should start with a '!'</p>
+
+<h3><a name="toc87"></a> matching</h3>
+
+<p>\vmatch</p>
+
+<h1><a name="toc91"></a> the processed file</h1>
+
+<p>A quiz file is processed by translate.pl and produces a file which can
+be loaded by the front-end to render the exam question, grade it, and
+report the result to the user.</p>

@@ -1,0 +1,3 @@
+Use markdown & markdowntoc.pl to generate readme.html from readme.md, i.e.,
+
+markdowntoc.pl readme.md | markdown > readme.html
