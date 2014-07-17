@@ -145,21 +145,30 @@ function showscp() {
     var htmlstring = "";
     for(var i = 0; i < len; i++) {
 	htmlString = $("#chooser").html();
-	$("#chooser").html(htmlString + "<div id='slidechoice' class='slidechoice" + (i+1) + "'></div>");
-	$(".slidechoice"+(i+1)).html("Slide " + (i+1) + ": " + slides[i].title +"<div id='slidechoicethumb"+ (i+1) + "'></div>");
-	$(".slidechoice" +(i+1)).css("height", "150px");
-	$(".slidechoice" +(i+1)).css("width", "200px");
-	$(".slidechoice" +(i+1)).css("background-image", "url('"+slides[i].img+"')");
-	$(".slidechoice" +(i+1)).css("background-size", "200px 150px");
+	$("#chooser").html(htmlString + "<div id='slidechoice' class='slidechoice" + (i+1) + "' onclick='goToSlide(" + (i) + ")'></div>");
+	$(".slidechoice"+(i+1)).html("<span id='slideinfo'>Slide " + (i+1) + ": " + slides[i].title +"</span><div id='slidechoicethumb"+ (i+1) + "'></div>");
+	$("#slidechoicethumb" +(i+1)).css("height", "150px");
+	$("#slidechoicethumb" +(i+1)).css("width", "200px");
+	$("#slidechoicethumb" +(i+1)).css("background-image", "url('/d1/scss/"+slides[i].img+"')");
+	$("#slidechoicethumb" +(i+1)).css("background-size", "200px 150px");
+	$("#slidechoicethumb" +(i+1)).css("float", "right");
+	$("#slidechoicethumb" +(i+1)).css("line-height", "200px");
+	$("#slidechoicethumb" +(i+1)).css("vertical-align", "middle");
+	$("#slidechoicethumb" +(i+1)).css("position", "relative");
+	$("#slidechoicethumb" +(i+1)).css("top", "25px");
 	console.log($("#chooser").html());
-	console.log($("slidechoicethumb"+(i+1)).css());
     }
-    
+ 
     $("#slidechoicepanel").css("visibility", "visible");
 };
 function closescp() {
     $("#slidechoicepanel").css("visibility", "hidden");
 };
+function goToSlide(index) {
+    player.seekTo(slides[index].time+.05, true);
+    updateSlide();
+    closescp();
+}
 
 
 

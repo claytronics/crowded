@@ -1,20 +1,22 @@
 <?
 include './setup.phpi';
 
+date_default_timezone_set("UTC");
+
 $info = array("id" => 100,
 	      "title" => "Intro to Binary",
 	      "date" => new DateTime('2014-06-01'),
 	      "speaker" => "John Jones",
 	      "video" => "a url goes here",
 	      "slides" => array(
-				array("image" => "Slide1.jpg",
+				array("img" => "Slide1.jpg",
 				      "thumb" => "thumb1.jpg",
-				      "start" => 0,
+				      "time" => 0,
 				      "title" => "First Slide in Lecture",
 				      "notes" => "Welcome to ..."),
-				array("image" => "Slide2.jpg",
+				array("img" => "Slide2.jpg",
 				      "thumb" => "thumb2.jpg",
-				      "start" => 10,
+				      "time" => 10,
 				      "title" => "Second Slide in Lecture",
 				      "notes" => "Binary is simple")
 				)
