@@ -80,16 +80,11 @@ function getLecture(i) {
     console.log("Getting lecture " + i);
     $.ajax({
 	type: 'POST',
-	url: '/php/getlecture.php',
-	data: 'id=' + i,
-	dataType: 'json',
+	url: 'getlecture.php',
+	data: 'id=100',
 	cache: false,
 	success: function(result) {
-	    /*for(var i in result) {
-		console.log(result[i]);
-	    }*/
-	    console.log(result.data);
+	    console.log(result);
 	},
     });
-
 };

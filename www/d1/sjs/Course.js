@@ -49,11 +49,16 @@ var lectures = [
     }
 ];
 
-var alreadyAdded=false;
+
+var slides = [];
+
+var alreadyAddedLectures=false;
+
+var alreadyAddedSlides = false;
 
 
-function showChooser() {
-    if(!alreadyAdded) {
+function showLectureChooser() {
+    if(!alreadyAddedLectures) {
 	console.log("foo");
 	var len = lectures.length;
 	var htmlString = "";
@@ -73,7 +78,7 @@ function showChooser() {
 	    
 	}
     }
-    alreadyAdded=true;
+    alreadyAddedLectures=true;
 };
 
 function getLecture(i) {
@@ -85,10 +90,10 @@ function getLecture(i) {
 	dataType: 'json',
 	cache: false,
 	success: function(result) {
-	    /*for(var i in result) {
-		console.log(result[i]);
-	    }*/
+	    alert(result.msg);
 	    console.log(result.data);
+	    //window.location='Interface.html';
 	},
     });
+
 };

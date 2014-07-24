@@ -1,5 +1,5 @@
 
-var alreadyAdded = false;
+var alreadyAddedSlides = false;
 
 var slides = [
     {
@@ -142,7 +142,7 @@ function next() {
 function showscp() {
     player.pauseVideo();
     var len = slides.length;
-    if(!alreadyAdded) {
+    if(!alreadyAddedSlides) {
 	var htmlstring = "";
 	for(var i = 0; i < len; i++) {
 	    htmlString = $("#chooser").html();
@@ -162,7 +162,7 @@ function showscp() {
     }
     
     $("#slidechoicepanel").css("visibility", "visible");
-    alreadyAdded=true;
+    alreadyAddedSlides=true;
 };
 function closescp() {
     $("#slidechoicepanel").css("visibility", "hidden");
