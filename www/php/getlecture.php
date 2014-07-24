@@ -31,7 +31,7 @@ try {
 
   // for now return hard coded object
   $r->msg = "Here is info for lecture ".$post_id;
-  $r->data = $info;
+  $r->data = json_encode($info);
   $r->output(0);
 } catch(Exception $ex){
   // return a 0 for an error
