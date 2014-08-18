@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
   <title>CrowdEd: An e-Learning Tool</title>
-  <script src="d0/sjs/libs/jquery-1.10.2.js" type="text/javascript"></script>
-  <link type="text/css" rel="stylesheet" href="/d1/scss/Interface.css"/>
-  <script src="/d1/sjs/Interface.js"></script>
+  <script src="/d0/sjs/libs/jquery-1.10.2.js" type="text/javascript"></script>
+  <link type="text/css" rel="stylesheet" href="d1/scss/Interface.css"/>
+  <script src="d1/sjs/Interface.js"></script>
 </head>
 <body>
-  <div id="hdr" data-role="header"><span id="title">CrowdEd</span> An e-Learning Tool
+  <div id="hdr"><span id="title">CrowdEd</span> An e-Learning Tool
     <div id="topbar">
       <div id="topbaritem"><a href="#home">Home</a></div>
       <div id="topbaritem"><a href="#news">News</a></div>
@@ -17,11 +17,7 @@
   <div id="dummyheader"></div>
   <div id="vidandpptpanel" data-role="content">
     <div id="video">
-      <iframe id="ytplayer" 
-	      type="text/html" 
-	      width="640" height="390"
-	      src="http://www.youtube.com/embed/A-yZNMWFqvM?enablejsapi=1&controls=0"
-	      frameborder="0"></iframe>
+      <!--This div is filled with an iframe-->
     </div>
     <div id="pptpanel">
       <div id="ppt">
@@ -46,6 +42,13 @@
   <div id="notespanel">
   </div>
   <div id="checkpoint" class="checkpoint1"></div>
+  <div id="id">
+    <?php
+       $id = $_GET["id"];
+       echo $id;
+       ?>
+  </div>
+
 </body>
 </html>
 
