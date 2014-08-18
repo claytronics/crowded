@@ -1,5 +1,5 @@
 #hdr {
-    background-color: #000047;
+    background-color: #666666;
     height: 98px;
     position: fixed;
     top: 0;
@@ -8,6 +8,7 @@
     z-index: 1;
     text-align: center;
     font-size:24px;
+    text-shadow: 1px 1px 1px black;
     color: white;
     border-bottom: 2px solid #4c4c4c;
 }
@@ -17,11 +18,13 @@
     text-shadow: 2px 2px 2px black;
 }
 
+
 #topbar {
     font-size: 24px;
     position: fixed;
     left: 20px;
     top: 65px;
+    text-shadow: 1px 1px 1px black;
 }
 
 a {
@@ -47,8 +50,7 @@ body {
     background-color: black;
 }
 
-
-#coursechooser {
+#lecturechooser {
     width: 1130px;
     margin-left: auto;
     margin-right: auto;
@@ -58,4 +60,33 @@ body {
     color: black;
     background-color: #FFFFF0;
     border: 2px solid #4c4c4c;
+}
+
+#chooser {
+    height: 500px;
+    width: 1130px;
+    color: white;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+#coursechoice {
+    height: 200px;
+    width: 1130px;
+    vertical-align: middle;
+    text-align: left;
+    color: white;
+    line-height: 200px;
+    vertical-align: middle;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+}
+
+#courseinfo {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 150px;
 }

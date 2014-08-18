@@ -1,3 +1,29 @@
+var courseData;
+var course;
+
+$(document).ready(function(){
+    var id = $("#id").html();
+    console.log("Getting course " + id);
+    $.ajax({
+	type: 'POST',
+	url: '/php/getcourse.php',
+	data: 'id=' + id,
+	dataType: 'json',
+	cache: false,
+	success: function(result) {
+	    courseData = JSON.parse(result.data);
+	    for(var course in courseData) {
+		if(courseData[course].id == id){
+		    course = courseData[course];
+		    break;
+		};
+	    };
+	    lectures = course.lectures;
+	    $("title").html(course.title + ": " + course.professor);
+	},
+    });
+});
+
 var lectures = [
     {
 	id: 100,
@@ -50,16 +76,14 @@ var lectures = [
 ];
 
 
-var slides = [];
 
 var alreadyAddedLectures=false;
 
-var alreadyAddedSlides = false;
 
 
 function showLectureChooser() {
     if(!alreadyAddedLectures) {
-	console.log("foo");
+	console.log("foot");
 	var len = lectures.length;
 	var htmlString = "";
 	for(var i=0; i<len; i++) {
@@ -83,17 +107,6 @@ function showLectureChooser() {
 
 function getLecture(i) {
     console.log("Getting lecture " + i);
-    $.ajax({
-	type: 'POST',
-	url: '/php/getlecture.php',
-	data: 'id=' + i,
-	dataType: 'json',
-	cache: false,
-	success: function(result) {
-	    alert(result.msg);
-	    console.log(result.data);
-	    //window.location='Interface.html';
-	},
-    });
+    window.location.href = "http://localhost:8080/lecture.php?id="+i;
 
 };

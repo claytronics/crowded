@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
   <title>CrowdEd: An e-Learning Tool</title>
-  <script src="d0/sjs/libs/jquery-1.10.2.js" type="text/javascript"></script>
-  <link type="text/css" rel="stylesheet" href="/d1/scss/Interface.css"/>
-  <script src="/d1/sjs/Interface.js"></script>
+  <script src="~/d0/sjs/libs/jquery-1.10.2.js" type="text/javascript"></script>
+  <link type="text/css" rel="stylesheet" href="~/d1/scss/Interface.css"/>
+  <script src="~/d1/sjs/Interface.js"></script>
 </head>
 <body>
   <div id="hdr" data-role="header"><span id="title">CrowdEd</span> An e-Learning Tool
@@ -46,6 +46,12 @@
   <div id="notespanel">
   </div>
   <div id="checkpoint" class="checkpoint1"></div>
+
+  <?php
+  echo "PHP!";
+  ?>
+
+
 </body>
 </html>
 

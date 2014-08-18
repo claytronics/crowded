@@ -1,5 +1,5 @@
 #hdr {
-    background-color: #000047;
+    background-color: #666666;
     height: 98px;
     position: fixed;
     top: 0;
@@ -8,6 +8,7 @@
     z-index: 1;
     text-align: center;
     font-size:24px;
+    text-shadow: 1px 1px 1px black;
     color: white;
     border-bottom: 2px solid #4c4c4c;
 }
@@ -23,6 +24,7 @@
     position: fixed;
     left: 20px;
     top: 65px;
+    text-shadow: 1px 1px 1px black;
 }
 
 a {
@@ -75,8 +77,6 @@ a {
     color: black;
     height: 360px;
     text-align: center;
-    font-size: 96px;
-    background-image: url("Slide1.jpg");
     background-size: 480px 360px;
 }
 
@@ -126,12 +126,13 @@ body {
     border-left: 2px solid #4c4c4c;
     border-right: 2px solid #4c4c4c;
     background-color: black;
-    /*opacity: .8;*/
+    opacity: .9;
     color: white;
-    position: relative;
-    top: -390px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
     visibility: hidden;
-    margin-bottom: -390px;
 }
 
 #chooser {
@@ -178,8 +179,8 @@ body {
     height: 500px;
     text-align: center;
     font-size: 96px;
-    color: black;
-    background-color: #FFFFF0;
+    color: white;
+    background-color: #666666;
     border: 2px solid #4c4c4c;
 }
 
@@ -188,10 +189,24 @@ p {
     font-size: 24px;
 }
 
-#test {
-    color: white;
+#checkpoint {
+    width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    text-align: center;
     font-size: 24px;
+    color: white;
+    background-color: #666666;
+    border: 2px solid #4c4c4c;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    visibility: hidden;
 }
+
 
 
 
