@@ -33,7 +33,7 @@ When a user selects one of these lectures, he is redirected to lecture.php?id=*l
 Upon loading, interface.js (the js file linked to lectuer.php) makes an AJAX POST call to getlecture.php with the lecture id as data. getlecture.php returns a JSON object with the following syntax:
 
 var slides = [
-	####{
+	{
 		img: *filepath of image of the slide*,
 		time: *nmber of seconds into video at which slide begins*,
 		notes: *notes that appear in bottom div while slide is active*,
