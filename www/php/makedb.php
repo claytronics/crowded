@@ -28,12 +28,9 @@ try {
 		 "root");	/* put in your root password here */
   
   $dbh->exec("CREATE DATABASE `$mysql_database`;
-              CREATE USER '$mysql_user'@'$mysql_hostname' 
-                IDENTIFIED BY '$mysql_password';
               GRANT ALL ON `$mysql_database`.* 
                 TO '$mysql_user'@'$mysql_hostname';
-              FLUSH PRIVILEGES;") 
-    or die(print_r($dbh->errorInfo(), true));
+              FLUSH PRIVILEGES;");
 } catch (PDOException $e) {
   die("DB ERROR: ". $e->getMessage());
 }
