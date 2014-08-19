@@ -4,8 +4,8 @@
 
 # The quiz file #
 
-This directory hols the quiz like questions that will be applied by
-the system.  Each question must be in a seperate file.  The files are
+This directory holds the quiz-like questions that will be applied by
+the system.  Each question must be in a separate file.  The files are
 a combination of our own syntax + markdown for formatting of the
 question text.  The questions will be preprocessed by the system into
 a json file which is what is loaded by the crowded front-end.
