@@ -1,3 +1,7 @@
+*Table of Contents*
+
+{TOC:3}
+
 # The quiz file #
 
 This directory hols the quiz like questions that will be applied by
@@ -21,6 +25,8 @@ title: the rest of the line is the title of this question.
 
 points: the rest of this line is the points for this question.  Must
 be a decimal number.
+
+pass: number of points needed for a pass
 
 ## sub-question specified ##
 
