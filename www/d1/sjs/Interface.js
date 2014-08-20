@@ -1,8 +1,15 @@
 var lectureData;
 var lecture;
+var user = 0;
+var username;
 
 $(document).ready(function(){
     var id = $("#id").html();
+    if(user==0) {
+	$("#loginButton").html("<a onclick='showLogin'>log in</a>");
+    } else {
+	$("#loginButton").html("<a onclick='showLogin'>hi " + username + "</a>");
+    };
     console.log("Getting lecture " + id);
     $.ajax({
 	type: 'POST',

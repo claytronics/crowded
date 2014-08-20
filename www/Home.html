@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <head>
   <title>CrowdEd: An e-Learning Tool</title>
   <!--insert jquery and js and css links here-->
@@ -6,17 +6,26 @@
   <link type="text/css" rel="stylesheet" href="/d1/scss/Home.css"/>
   <script src="/d1/sjs/Home.js"></script>
 </head>
-<body onload="showCourseChooser()">
-  <div id="hdr" data-role="header"><span id="title">CrowdEd</span> An e-Learning Tool
+<body>
+  <div id="hdr" data-role="header"><span id="title"></span> An e-Learning Tool
+    <div id="settingsButton"></div>
+    <div id="loginButton" onclick="showLogIn()"></div>
     <div id="topbar">
-      <div id="topbaritem"><a href="#home">Home</a></div>
-      <div id="topbaritem"><a href="#news">News</a></div>
-      <div id="topbaritem"><a href="#contact">Contact</a></div>
-      <div id="topbaritem"><a href="#about">About</a></div>
+      <div id="topbaritem"><a href="Home.html">Home</a></div>
+      <div id="topbaritem"><a href="#news">My Courses</a></div>
     </div>
   </div>
   <div id="dummyheader"></div>
   <div id="chooser"></div>
-</div>
+  <div id="hazycover">
+    <div id="login">Please enter username and password.
+      <form action="login.php" method="post">
+	Username: <input type="text" name="username"><br>
+	Password: <input type="password" name="password"><br>
+	<input type="checkbox" name="rememberme" value="Remember">Remember Me<br>
+	<input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
 </body>
 </html>
