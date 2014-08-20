@@ -62,9 +62,9 @@ function listTables() {
 createTable("user", "(
 	userid		INT (10)	NOT NULL AUTO_INCREMENT,
 	name		VARCHAR(64)	NOT NULL,
-	username	VARCHAR(64)	NOT NULL,
+	username	VARCHAR(64),
 	password	VARCHAR(64)	NOT NULL,
-	email		VARCHAR(64)	NOT NULL,
+	email		VARCHAR(64),
 	created		TIMESTAMP	default CURRENT_TIMESTAMP,
 	status		INT(3)		NOT NULL,
 	PRIMARY KEY (userid),
