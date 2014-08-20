@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>CrowdEd: An e-Learning Tool</title>
+  <!--insert jquery and js and css links here-->
+</head>
+<body>
+  <div id="hdr" data-role="header"><span id="title">CrowdEd</span> An e-Learning Tool
+    <div id="topbar">
+      <div id="topbaritem"><a href="#home">Home</a></div>
+      <div id="topbaritem"><a href="#news">News</a></div>
+      <div id="topbaritem"><a href="#contact">Contact</a></div>
+      <div id="topbaritem"><a href="#about">About</a></div>
+    </div>
+  </div>
+  <div id="dummyheader"></div>
+  <div id="coursechooser">
+
+
+  </div>
+</body>
+</html>

@@ -1,3 +1,15 @@
+var user = 0;
+var username;
+
+$(document).ready(function(){
+    showCourseChooser();
+    if(user==0) {
+	$("#loginButton").html("<a onclick='showLogin'>log in</a>");
+    } else {
+	$("#loginButton").html("<a onclick='showLogin'>hi " + username + "</a>");
+    };
+});
+
 var courses = [
     {
 	id: 0,
@@ -71,4 +83,7 @@ function getCourse(i) {
     console.log("Getting course " + i);
     window.location.href = "http://localhost:8080/Course.php?id="+i;
 
+};
+function showLogIn() {
+    $("#hazycover").css("visibility", "visible");
 };

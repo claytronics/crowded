@@ -7,12 +7,12 @@
   <script src="/d1/sjs/Course.js"></script>
 </head>
 <body onload="showLectureChooser()">
-  <div id="hdr" data-role="header"><span id="title">CrowdEd</span> An e-Learning Tool
+  <div id="hdr" data-role="header"><span id="title"></span> An e-Learning Tool
+    <div id="settingsButton"></div>
+    <div id="loginButton"></div>
     <div id="topbar">
-      <div id="topbaritem"><a href="#home">Home</a></div>
-      <div id="topbaritem"><a href="#news">News</a></div>
-      <div id="topbaritem"><a href="#contact">Contact</a></div>
-      <div id="topbaritem"><a href="#about">About</a></div>
+      <div id="topbaritem"><a href="Home.html">Home</a></div>
+      <div id="topbaritem"><a href="#news">My Courses</a></div>
     </div>
   </div>
   <div id="dummyheader"></div>
