@@ -72,12 +72,13 @@ createTable("user", "(
 
 createTable("course", "(
 	courseid		INT (10)	NOT NULL AUTO_INCREMENT,
+	number			VARCHAR(16)	NOT NULL,
 	title			VARCHAR(64)	NOT NULL,
 	profid			INT (10)	NOT NULL,
 	thumb			VARCHAR(128)	NOT NULL,
 	created		TIMESTAMP	default CURRENT_TIMESTAMP,
 	PRIMARY KEY (courseid),
-	KEY (courseid))");
+	KEY (courseid, number))");
 
 createTable("lecture", "(
 	lectureid		INT (10)	NOT NULL AUTO_INCREMENT,
@@ -110,6 +111,11 @@ createTable("viewed", "(
 	date			TIMESTAMP	NOT NULL,
 	passed			INT (2)		NOT NULL,
 	KEY (userid,lectureid,slideid))");
+
+createTable("roster", "(
+	userid			INT (10)	NOT NULL,
+	courseid		INT (10)	NOT NULL,
+	KEY (courseid,userid))");
 
 listTables();
 
