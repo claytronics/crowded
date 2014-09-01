@@ -6,7 +6,7 @@
   <link type="text/css" rel="stylesheet" href="/d1/scss/Course.css"/>
   <script src="/d1/sjs/Course.js"></script>
 </head>
-<body onload="showLectureChooser()">
+<body>
   <div id="hdr" data-role="header"><span id="title"></span> An e-Learning Tool
     <div id="settingsButton"></div>
     <div id="loginButton"></div>
@@ -17,10 +17,10 @@
   </div>
   <div id="dummyheader"></div>
   <div id="chooser"></div>
-  <div id="id">
+  <div id="course">
     <?php
-       $id = $_GET["id"];
-       echo $id;
+       $course = $_GET["course"];
+       echo $course;
        ?>
   </div>
 </body>

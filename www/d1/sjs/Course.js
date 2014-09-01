@@ -2,41 +2,38 @@ var courseData;
 var course;
 var user = 0;
 var username;
+var lectures = [];
 
 $(document).ready(function(){
-    var id = $("#id").html();
+    var course = $("#course").html();
     if(user==0) {
 	$("#loginButton").html("<a onclick='showLogin'>log in</a>");
     } else {
 	$("#loginButton").html("<a onclick='showLogin'>hi " + username + "</a>");
     };
-    console.log("Getting course " + id);
+    console.log("Getting course " + course);
     $.ajax({
 	type: 'POST',
-	url: '/php/getcourse.php',
-	data: 'id=' + id,
+	url: '/php/loadcourse.php',
+	data: 'course=' + course,
 	dataType: 'json',
 	cache: false,
 	success: function(result) {
+	    console.log("hi");
+	    console.log(JSON.parse(result.test));
 	    courseData = JSON.parse(result.data);
-	    for(var course in courseData) {
-		if(courseData[course].id == id){
-		    course = courseData[course];
-		    break;
-		};
-	    };
-	    lectures = course.lectures;
-	    $("title").html(course.title + ": " + course.professor);
+	    lectures = courseData.lectures;
+	    $("title").html(courseData.title + ": " + courseData.professor);
 	},
     });
+    showLectureChooser();
 });
 
-var lectures = [
+/*var lectures = [
     {
 	id: 100,
 	title: "Welcome!",
 	date: "6 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide1.jpg"
     },
@@ -44,7 +41,6 @@ var lectures = [
 	id: 101,
 	title: "Second lecture",
 	date: "8 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide2.jpg"
     },
@@ -52,7 +48,6 @@ var lectures = [
 	id: 102,
 	title: "Third lecture",
 	date: "10 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide3.jpg"
     },
@@ -60,7 +55,6 @@ var lectures = [
 	id: 103,
 	title: "Fourth lecture",
 	date: "12 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide4.jpg"
     },
@@ -68,7 +62,6 @@ var lectures = [
 	id: 104,
 	title: "Fifth lecture",
 	date: "14 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide2.jpg"
     },
@@ -76,11 +69,10 @@ var lectures = [
 	id: 105,
 	title: "Sixth lecture",
 	date: "16 September 2013",
-	time: "11:00 a.m.",
 	lecturer: "Arnold Schwartzenegger",
 	thumb: "Slide1.jpg"
     }
-];
+];*/
 
 
 
